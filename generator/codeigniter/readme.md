@@ -1,0 +1,4 @@
+- Buat template
+- Copy kedalam folder app
+- Replace dengan text sesuai halaman
+- Pindahkan kedalam folder app

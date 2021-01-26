@@ -1,0 +1,14 @@
+{
+    "relationRules": {
+        "keterangan": "Ini digunakan untuk relasi tabel, implementasinya nanti saja yang penting MVC dulu",
+        "fieldsOne": {
+            "label": "id_matkul",
+            "value": "id",
+            "select": "matkul"
+        }
+    },
+    "fields": {
+        "one": ["id", "nama", "nim", "id_matkul"],
+        "two": ["id", "matkul", "dosen"]
+    }
+}
