@@ -12,20 +12,42 @@ module.exports.models = function () {
         })
         j++
     }
+    setTimeout(() => {
+        for (let k = 0; k < values.length; k++) {
+            appendString = '';
+            appendString += "" + values[k] + ",";
+
+            replace({
+                regex: "FIELDS",
+                replacement: appendString,
+                paths: ['app_laravel/app/Models/' + keys[k] + 'Models.php'],
+                recursive: true,
+                silent: true,
+            });
+
+            replace({
+                regex: "TABLE",
+                replacement: keys[k],
+                paths: ['app_laravel/app/Models/' + keys[k] + 'Models.php'],
+                recursive: true,
+                silent: true,
+            });
+
+            replace({
+                regex: "PRIMARY_KEY",
+                replacement: values[k][0],
+                paths: ['app_laravel/app/Models/' + keys[k] + 'Models.php'],
+                recursive: true,
+                silent: true,
+            });
+        }
+    }, 200);
 }
 
-module.exports.replace = function () {
-    for (let k = 0; k < values.length; k++) {
-        appendString = '';
-        appendString += "" + values[k] + "," + "\n";
+module.exports.controller = function () {
+    
+}
 
-        replace({
-            regex: "APA",
-            replacement: appendString,
-            paths: ['app_laravel/app/Models/' + keys[k] + 'Models.php'],
-            recursive: true,
-            silent: true,
-        });
-        console.log(values.length, values[k], keys[k]);
-    }
+module.exports.view = function () {
+    
 }

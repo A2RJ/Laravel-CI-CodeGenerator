@@ -8,8 +8,8 @@
         }
     },
     "table": {
-        "mahasiswa": ["id", "nama", "nim", "id_matkul", "sdsdsd"],
-        "mahasiswas": ["id", "nama", "nim", "id_matkul"],
+        "mahasiswa": ["idnama", "nama", "nim", "id_matkul", "sdsdsd"],
+        "mahasiswas": ["hahay", "nama", "nim", "id_matkul"],
         "coba": ["id", "nama", "nim", "id_matkul"],
         "matkul": ["id", "matkul", "dosen"],
         "caa": ["id", "matkul", "dosen"],
