@@ -7,8 +7,13 @@
             "select": "matkul"
         }
     },
-    "fields": {
-        "one": ["id", "nama", "nim", "id_matkul"],
-        "two": ["id", "matkul", "dosen"]
+    "table": {
+        "mahasiswa": ["id", "nama", "nim", "id_matkul", "sdsdsd"],
+        "mahasiswas": ["id", "nama", "nim", "id_matkul"],
+        "coba": ["id", "nama", "nim", "id_matkul"],
+        "matkul": ["id", "matkul", "dosen"],
+        "caa": ["id", "matkul", "dosen"],
+        "cabe": ["id", "matkul", "dosen"],
+        "bawang": ["id", "matkul", "dosen"]
     }
 }
