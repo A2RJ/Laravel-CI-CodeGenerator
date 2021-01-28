@@ -19,28 +19,30 @@ while ($row = $result->fetch_array()) {
     }
 }
 
-$ulang = ',"table": {' . "\n";
+$json = '{' . "\n";
 for ($i = 0; $i < count($rows); $i++) {
     $fields = "SHOW COLUMNS FROM " . $rows[$i];
     $fields = $mysqli->query($fields);
     
-    $ulang .= '"'.$rows[$i] . '":[';
+    $json .= '"'.$rows[$i] . '":[';
     while ($fieldsrow = $fields->fetch_array()) {
-        $ulang .= '"' . $fieldsrow[0] . '",';
+        $json .= '"' . $fieldsrow[0] . '",';
     }
-    $ulang .= '],';
+    $json .= '],';
 }
-$ulang .= "}}}}";
+$json .= "}";
 
 $fileName = "config/config.json";
-$jsonFile = fopen($fileName, "w") or die("Unable to open file!");
-fwrite($jsonFile, $ulang);
+// $jsonFile = fopen($fileName, "w") or die("Unable to open file!");
+// fwrite($jsonFile, $json);
+$str = file_get_contents($fileName);
+$str = str_replace("21", $json, $str);
+file_put_contents($fileName, $str);
+
 $str = file_get_contents($fileName);
 $str = str_replace(",]", "]", $str);
 file_put_contents($fileName, $str);
+
 $str = file_get_contents($fileName);
 $str = str_replace(",}", "}", $str);
-file_put_contents($fileName, $str);
-$str = file_get_contents($fileName);
-$str = str_replace('},', ",", $str);
 file_put_contents($fileName, $str);

@@ -1,10 +1,11 @@
 {
-  "name": "jsgenerator",
+  "name": "php_generator",
   "version": "1.0.0",
-  "description": "Generate MVC or Restfull API in Laravel, Codeigniter and Express",
+  "description": "Generate MVC or Restfull API in Laravel, Codeigniter",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "generate": "php config/config.php && node index.js"
   },
   "repository": {
     "type": "git",
@@ -30,7 +31,6 @@
     "dotenv": "^8.2.0",
     "fs": "0.0.1-security",
     "fs-extra": "^9.1.0",
-    "replace": "^1.2.0",
-    "replace-in-file": "^6.1.0"
+    "replace": "^1.2.0"
   }
 }

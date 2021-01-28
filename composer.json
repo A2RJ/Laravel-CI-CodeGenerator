@@ -1,4 +1,7 @@
 {
+    "name": "a2rj/phpgenerator",
+    "description": "Generate MVC or Restfull API in Laravel, Codeigniter",
+    "version": "1.0.0",
     "require": {
         "josegonzalez/dotenv": "dev-master"
     }

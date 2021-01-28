@@ -1,2 +1,59 @@
-,"table": {
-"admin":["userid","name","email","password","created_at","updated_at"],"aktivitas":["id_aktivitas","aktivitas"],"akun":["id","id_aktivitas","no_akun","akun","debet","kredit","keterangan"],"jangka_waktu":["id","id_aktivitas","jangka_waktu"],"jurnal":["id","id_aktivitas","jangka_waktu","no_akun","keterangan","jum_debet","jum_kredit","created_at","updated_at"]}}}}
+{
+    "description": "Ubah value tabel menjadi 21 jika ingin reset schema",
+    "relationRules": {
+        "mahasiswa": {
+            "primaryKey": "id_mahasiswa",
+            "foreignKey": "id_matkul",
+            "label": "matkul"
+        },
+        "matkul": {
+            "primaryKey": "id_matkul",
+            "foreignKey": "id_dosen",
+            "label": "dosen"
+        },
+        "matkul2": {
+            "primaryKey": "id_matkul",
+            "foreignKey": "id_dosen",
+            "label": "dosen"
+        }
+    },
+    "table": {
+        "admin": [
+            "userid",
+            "name",
+            "email",
+            "password",
+            "created_at",
+            "updated_at"
+        ],
+        "aktivitas": [
+            "id_aktivitas",
+            "aktivitas"
+        ],
+        "akun": [
+            "id",
+            "id_aktivitas",
+            "no_akun",
+            "akun",
+            "debet",
+            "kredit",
+            "keterangan"
+        ],
+        "jangka_waktu": [
+            "id",
+            "id_aktivitas",
+            "jangka_waktu"
+        ],
+        "jurnal": [
+            "id",
+            "id_aktivitas",
+            "jangka_waktu",
+            "no_akun",
+            "keterangan",
+            "jum_debet",
+            "jum_kredit",
+            "created_at",
+            "updated_at"
+        ]
+    }
+}
