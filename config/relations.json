@@ -1,0 +1,14 @@
+{
+        "relationRules": {
+            "mahasiswa": {
+                "primaryKey": "id_mahasiswa",
+                "foreignKey": "id_matkul",
+                "label": "matkul"
+            },
+            "matkul": {
+                "primaryKey": "id_matkul",
+                "foreignKey": "id_dosen",
+                "label": "dosen"
+            }
+        }
+}
