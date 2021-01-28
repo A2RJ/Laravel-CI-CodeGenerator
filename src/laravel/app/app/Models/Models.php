@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class TABLE extends Model
 {
-    protected $table = 'TABLE';
-    protected $primaryKey = 'PRIMARY_KEY';
-    protected $fillable = ['FIELDS'];
+    protected $table = "TABLE";
+    protected $primaryKey = "PRIMARY_KEY";
+    protected $fillable = ["FIELDS"];
 }
