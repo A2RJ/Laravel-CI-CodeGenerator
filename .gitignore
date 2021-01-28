@@ -17,3 +17,4 @@ node_modules/
 # deployed package files #
 
 *.DEPLOYED
+vendor/josegonzalez/dotenv/
