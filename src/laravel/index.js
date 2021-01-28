@@ -18,7 +18,7 @@ module.exports.models = function () {
             
             replace({
                 regex: "FIELDS",
-                replacement: values[k].join('","'),
+                replacement: JSON.stringify(values[k]),
                 paths: [process.env.APP_PATH + '/app/Models/' + keys[k] + 'Models.php'],
                 recursive: true,
                 silent: true,

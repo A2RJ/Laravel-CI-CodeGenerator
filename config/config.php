@@ -19,7 +19,7 @@ while ($row = $result->fetch_array()) {
     }
 }
 
-$ulang = '{"table": {' . "\n";
+$ulang = ',"table": {' . "\n";
 for ($i = 0; $i < count($rows); $i++) {
     $fields = "SHOW COLUMNS FROM " . $rows[$i];
     $fields = $mysqli->query($fields);
@@ -30,7 +30,7 @@ for ($i = 0; $i < count($rows); $i++) {
     }
     $ulang .= '],';
 }
-$ulang .= "}}";
+$ulang .= "}}}}";
 
 $fileName = "config/config.json";
 $jsonFile = fopen($fileName, "w") or die("Unable to open file!");
@@ -40,4 +40,7 @@ $str = str_replace(",]", "]", $str);
 file_put_contents($fileName, $str);
 $str = file_get_contents($fileName);
 $str = str_replace(",}", "}", $str);
+file_put_contents($fileName, $str);
+$str = file_get_contents($fileName);
+$str = str_replace('},', ",", $str);
 file_put_contents($fileName, $str);
