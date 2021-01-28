@@ -1,19 +1,19 @@
 {
     "relationRules": {
-        "keterangan": "Ini digunakan untuk relasi tabel, implementasinya nanti saja yang penting MVC dulu",
-        "fieldsOne": {
-            "label": "id_matkul",
-            "value": "id",
-            "select": "matkul"
+        "mahasiswa": {
+            "primaryKey": "id_mahasiswa",
+            "foreignKey": "id_matkul",
+            "label": "matkul"
+        },
+        "matkul": {
+            "primaryKey": "id_matkul",
+            "foreignKey": "id_dosen",
+            "label": "dosen"
         }
     },
     "table": {
-        "mahasiswa": ["idnama", "nama", "nim", "id_matkul", "sdsdsd"],
-        "mahasiswas": ["hahay", "nama", "nim", "id_matkul"],
-        "coba": ["id", "nama", "nim", "id_matkul"],
-        "matkul": ["id", "matkul", "dosen"],
-        "caa": ["id", "matkul", "dosen"],
-        "cabe": ["id", "matkul", "dosen"],
-        "bawang": ["id", "matkul", "dosen"]
+        "mahasiswa": ["id_mahasiswa", "nama", "nim", "id_matkul", "sdsdsd"],
+        "matkul": ["id_matkul", "matkul", "id_dosen"],
+        "dosen": ["id_dosen", "dosen"]
     }
 }
